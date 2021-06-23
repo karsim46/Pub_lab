@@ -4,7 +4,11 @@ class Pub:
         self.till = till
         self.drink = []
         
-    def buy_drink(self, customer, drink):
+    def sell_drink(self, customer, drink):
         self.till += drink.price
         customer.pay_drink(drink)
     
+    def age_check(self, customer):
+        return customer.age >= 18
+                           
+            
